@@ -10,7 +10,6 @@ function addTask(e) {
             <a href ="#" class="task__remove">&times;</a>
          </div>`;
     taskList.insertAdjacentHTML("afterbegin", task);
-    input.value = '';
 
     const taskRemove = taskList.querySelector(".task__remove");
     taskRemove.addEventListener("click", (e) => {
@@ -23,4 +22,5 @@ btn.addEventListener("click", (e) => {
     if (input.value.trim()) {
         addTask(e);
     }
+    input.value = '';
 });
